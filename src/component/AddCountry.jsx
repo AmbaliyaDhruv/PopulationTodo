@@ -17,7 +17,7 @@ function AddCountry() {
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post("http://localhost:8080/add-country",text).then(res=>{
+        axios.post("https://populationserver.herokuapp.com/add-country",text).then(res=>{
             
             setText({
                 name:""

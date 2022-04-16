@@ -13,7 +13,7 @@ function Update() {
     const [country,setCountry]=useState([])
    
     useEffect(()=>{
-        axios.get("http://localhost:8080/add-country").then(res=>{
+        axios.get("https://populationserver.herokuapp.com/add-country").then(res=>{
             setCountry(res.data)
         })
     },[])
@@ -27,7 +27,7 @@ function Update() {
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.patch(`http://localhost:8080/add-city/${id}`,text).then(res=>{
+        axios.patch(`https://populationserver.herokuapp.com/add-city/${id}`,text).then(res=>{
            
             setText({
                 cityname:"",

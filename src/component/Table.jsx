@@ -8,7 +8,7 @@ function Table() {
 
      
     const getData=()=>{
-        axios.get("http://localhost:8080/add-city").then(res=>{
+        axios.get("https://populationserver.herokuapp.com/add-city").then(res=>{
             setData(res.data)
         })
     }
@@ -18,7 +18,7 @@ function Table() {
 
 
     const handleDelete=(id)=>{
-      axios.delete(`http://localhost:8080/add-city/${id}`).then(res=>{
+      axios.delete(`https://populationserver.herokuapp.com/add-city/${id}`).then(res=>{
           getData()
       })
     }
